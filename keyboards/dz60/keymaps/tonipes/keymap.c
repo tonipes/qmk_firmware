@@ -1,5 +1,9 @@
 #include QMK_KEYBOARD_H
 
+/*---Layers-------------------------------------------- */
+// #define LAYER_BASE 0
+// #define LAYER_FUNC 1
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     /* Qwerty
@@ -12,7 +16,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     * |----------------------------------------------------------------------------------------+
     * | Shift    |  Z  |  X  |  C  |  V  |  B  |  N  |  M  |  ,  |  .  |  /  | RSh |  U  | Ins |
     * |----------------------------------------------------------------------------------------+
-    * | Ctrl |  Gui  |  Alt  |              Space                | Gui |  Fn |  L  |  D  |  R  |
+    * |  Fn  |  Alt  |  Gui  |              Space                | Gui |  Fn |  L  |  D  |  R  |
     * `----------------------------------------------------------------------------------------'
     */
 
@@ -26,7 +30,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     /* Qwerty
     * ,----------------------------------------------------------------------------------------.
-    * |Grave| F1  | F2  | F3  | F4  | F5  | F6  | F7  | F8  | F9  | F10 | F11 | F12 |    Del   |
+    * |Grave| F1  | F2  | F3  | F4  | F5  | F6  | F7  | F8  | F9  | F10 | F11 | F12 |   Del    |
     * |----------------------------------------------------------------------------------------+
     * |        | M2  | M↑  | M1  | MW↑ |     |     |     |     |     |     | Vol-| Vol+|  Mute |
     * |----------------------------------------------------------------------------------------+
@@ -42,7 +46,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_GRV  , KC_F1   , KC_F2   , KC_F3   , KC_F4   , KC_F5   , KC_F6   , KC_F7   , KC_F8   , KC_F9   , KC_F10  , KC_F11  , KC_F12  , _______   , KC_DEL  ,
         _______ ,           KC_BTN2 , KC_MS_U , KC_BTN1 , KC_WH_U , _______ , _______ , _______ , _______ , _______ , _______ , KC_VOLD , KC_VOLU   , KC_MUTE ,
         _______ ,           KC_MS_L , KC_MS_D , KC_MS_R , KC_WH_D , _______ , KC_LEFT , KC_DOWN , KC_UP   , KC_RIGHT, KC_MPRV , KC_MNXT , KC_MPLY   ,
-        _______ ,           _______ , _______ , _______ , _______ , _______ , _______ , _______ , _______ , KC_MPRV , KC_MNXT , KC_PSCR , KC_PGUP   , KC_INS  ,
+        _______ ,           RGB_TOG , RGB_M_T , RGB_M_G , RGB_M_X , RGB_M_K , RGB_M_SN , RGB_M_SW , RGB_M_R , KC_MPRV , KC_MNXT , KC_PSCR , KC_PGUP   , KC_INS  ,
         _______ , _______ ,           _______ , _______ ,           _______ ,           _______ ,           _______ , _______ , KC_HOME , KC_PGDOWN , KC_END
     ),
 
